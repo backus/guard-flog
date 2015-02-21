@@ -11,7 +11,7 @@ module Guard
     def run_all; end
 
     def run_on_changes(paths)
-      Flogger.new.flog paths
+      Flogger.new(@options).flog paths
     end
   end
 end
