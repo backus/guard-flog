@@ -1,10 +1,13 @@
 require 'guard/compat/plugin'
+require 'guard'
 
 module Guard
   class Flog < Plugin
     autoload :Flogger, 'guard/flog/flogger'
 
-    def start; end
+    def start
+      ::Guard::UI.info 'Guard::Flog is running'
+    end
 
     def reload; end
 
