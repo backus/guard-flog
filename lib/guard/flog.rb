@@ -11,7 +11,9 @@ module Guard
 
     def reload; end
 
-    def run_all; end
+    def run_all
+      Flogger.new(@options).flog Dir['./**/*.rb']
+    end
 
     def run_on_changes(paths)
       Flogger.new(@options).flog paths
